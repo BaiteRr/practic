@@ -35,5 +35,13 @@ header.onclick = () => {
     }
 }
 
-training.ondblclick
+training.addEventListener('dblclick', () => {
+    if (training.style.color === 'green') {
+        training.style.color = 'red'
+        training.style.backgroundColor = '#fff'
+    } else {
+        training.style.color = 'green'
+        training.style.backgroundColor = 'black'
+    }
+})
 
