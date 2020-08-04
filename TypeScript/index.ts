@@ -86,13 +86,30 @@
 //   }
 //  }
 
-interface SayHello {
-  sayHello: () => void
+// interface SayHello {
+//   sayHello: () => void
+// }
+
+// class User implements SayHello {
+//   constructor(private name: string, private age: number) {}
+//   sayHello() {
+//     console.log(this.name + ' Hello')
+//   }
+// }
+
+// const arr: Array<number> = [1, 2, 3, 4]
+
+interface User {
+  id: number
+  name: string
+  age: number
 }
 
-class User implements SayHello {
-  constructor(private name: string, private age: number) {}
-  sayHello: () {
-    console.log(this.name + ' Hello')
-  }
-}
+const users: Array<User> = [
+  {id: 1, name: 'V', age: 2},
+  {id: 2, name: 'K', age: 3}
+]
+const users2: User[] = [
+  { id: 1, name: 'V', age: 2 },
+  { id: 2, name: 'K', age: 3 }
+]
