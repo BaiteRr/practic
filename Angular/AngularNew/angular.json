@@ -3,11 +3,11 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "Angular-learn": {
+    "AngularNew": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
-          "style": "less"
+          "style": "sass"
         }
       },
       "root": "",
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/Angular-learn",
+            "outputPath": "dist/AngularNew",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -28,7 +28,7 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.less"
+              "src/styles.sass"
             ],
             "scripts": []
           },
@@ -66,18 +66,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "Angular-learn:build"
+            "browserTarget": "AngularNew:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "Angular-learn:build:production"
+              "browserTarget": "AngularNew:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "Angular-learn:build"
+            "browserTarget": "AngularNew:build"
           }
         },
         "test": {
@@ -92,7 +92,7 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.less"
+              "src/styles.sass"
             ],
             "scripts": []
           }
@@ -114,15 +114,15 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "Angular-learn:serve"
+            "devServerTarget": "AngularNew:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "Angular-learn:serve:production"
+              "devServerTarget": "AngularNew:serve:production"
             }
           }
         }
       }
     }},
-  "defaultProject": "Angular-learn"
+  "defaultProject": "AngularNew"
 }
